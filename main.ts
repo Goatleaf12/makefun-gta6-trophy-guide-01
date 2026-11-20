@@ -19,6 +19,10 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildDossier } from './vendor/makefun-frontend.ts';
 
+// This entry is "Leonida Ledger": a GTA VI trophy guide & tracker whose every step cites its source.
+// The title below is the entry's public name, printed at hand-in so the run log shows what was submitted.
+const ENTRY_TITLE = 'Leonida Ledger — GTA VI trophy guide & tracker: all 55 trophies, every step cited, platinum roadmap, missables flagged';
+
 const here = fileURLToPath(new URL('.', import.meta.url));
 const out = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 
@@ -34,3 +38,5 @@ writeFileSync(
   join(out, 'dossier.json'),
   buildDossier(out, { text_max_bytes: 163840, screenshots: { max: 4, max_bytes: 262144 }, app_max_files: 993, app_max_bytes: 50331648 }),
 );
+
+console.log(`handed in: ${ENTRY_TITLE}`);

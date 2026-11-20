@@ -3,23 +3,82 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Ledger — GTA VI Trophy Guide &amp; Tracker</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">LL</div>
+    <div class="brand-text">
+      <h1>Leonida Ledger</h1>
+      <p>GTA VI · PlayStation 5 · Trophy guide &amp; tracker · 55 trophies</p>
+    </div>
+  </div>
+  <div class="progress-box">
+    <div class="progress-big"><span id="earned-count">0</span> / 55 <span class="progress-word">earned</span></div>
+    <div class="grade-chips" id="grade-chips"></div>
+  </div>
+  <div class="top-actions">
+    <label class="spoiler-toggle" title="Mask unearned story and hidden trophies until you reveal or earn them">
+      <input type="checkbox" id="spoiler"> <span>Hide story spoilers until earned</span>
+    </label>
+    <div class="action-row">
+      <button id="export" type="button">Export</button>
+      <label class="import-btn">Import <input id="import" type="file" accept="application/json" hidden></label>
+    </div>
+    <p class="saved-note" id="saved-note">Saved in this browser</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<div class="audit-strip" id="audit-strip">Loading the ledger…</div>
+
+<nav class="filterbar">
+  <div class="chips" id="chips"></div>
+  <div class="filter-tools">
+    <input id="search" type="search" placeholder="Search trophies…" aria-label="Search trophies">
+    <select id="grade-filter" aria-label="Filter by grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </div>
+</nav>
+
+<nav class="tabs" id="tabs">
+  <button type="button" data-view="checklist" class="tab active">Checklist</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to platinum</button>
+  <button type="button" data-view="missables" class="tab">Missables &amp; watch</button>
+  <button type="button" data-view="sources" class="tab">Sources</button>
+</nav>
+
+<main>
+  <section id="view-checklist" class="view">
+    <div class="pane-list" id="trophy-list"></div>
+    <article class="pane-detail" id="trophy-detail"></article>
+    <aside class="pane-rail" id="source-rail"></aside>
+  </section>
+
+  <section id="view-roadmap" class="view" hidden>
+    <div id="roadmap-body"></div>
+  </section>
+
+  <section id="view-missables" class="view" hidden>
+    <div id="missables-body"></div>
+  </section>
+
+  <section id="view-sources" class="view" hidden>
+    <div id="sources-body"></div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Every guide is paraphrased in our own words; the numbered citations beside each step point at the public
+  sources it rests on. Official trophy names, descriptions and grades are PlayStation's. Not affiliated with Rockstar Games.</p>
+</footer>
+
 <script type="module" src="app.js"></script>
 </body>
 </html>

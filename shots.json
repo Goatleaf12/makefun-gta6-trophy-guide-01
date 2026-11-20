@@ -1,5 +1,1 @@
-[
-  { "file": "1-checklist.jpg", "path": "/", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "2-silver.jpg", "path": "/", "grade": "silver", "viewport": { "width": 1280, "height": 800 } },
-  { "file": "3-bronze.jpg", "path": "/", "grade": "bronze", "scroll": 1400, "viewport": { "width": 1280, "height": 800 } }
-]
+[{"file":"1-checklist.jpg","note":"Checklist with the Positive Mental Attitude guide open, 11 trophies pre-earned, meditation counter at 6/18","path":"/?demo=cover","viewport":{"height":800,"width":1280}},{"file":"2-roadmap.jpg","note":"Roadmap tab: goal banner, NEXT UP cards, seven stage cards with progress","path":"/?demo=roadmap","viewport":{"height":800,"width":1280}},{"file":"3-missables.jpg","note":"Missables & watch tab with the spoiler shield on and hidden trophies masked","path":"/?demo=miss","viewport":{"height":800,"width":1280}},{"file":"4-sources.jpg","note":"Sources tab: the seven-source matrix with cited-by counts","path":"/?demo=sources","viewport":{"height":800,"width":1280}}]
